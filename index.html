@@ -639,3 +639,287 @@
 </script>
 </body>
 </html>
+
+GitHub lo Steps:
+
+github.com/lokesh-edits/lokesh-edits.github.io open cheyyi
+index.html click cheyyi → pencil icon ✏️
+Ctrl+A → Delete
+Paina code Ctrl+A → Ctrl+C copy cheyyi → GitHub lo Ctrl+V
+Commit changes click cheyyi ✅
+
+Done bro! 🔥You said: full contect icons rale rafull contect icons rale ra12:33 PMClaude responded: Bro contact section lo CSS missing ayyindi — adi fix chesina code ikkade undi, download cheyyi!Bro contact section lo CSS missing ayyindi — adi fix chesina code ikkade undi, download cheyyi! 👇
+Icons kosam font-awesome add chestanu kuda — fire ga untundi! 🔥Edited 3 files, ran a command, read a fileEdited 3 files, ran a command, read a fileReady bro! 🔥 Download cheyyi — ippudu contact section lo:
+
+📷 Instagram icon + link
+💬 WhatsApp icon + link
+✉️ Email icon + link
+
+GitHub lo same steps — old code delete cheyyi, ee file contents paste cheyyi, commit cheyyi! 🚀IndexCode · HTML DownloadYou said: code evu bro copy kosamcode evu bro copy kosam12:34 PMClaude responded: Bro direct copy cheyyadaniki ikkade undi 👇 — code box lo click chesi Ctrl+A → Ctrl+C cheyyi!Bro direct copy cheyyadaniki ikkade undi 👇 — code box lo click chesi Ctrl+A → Ctrl+C cheyyi!
+html<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lokesh — Video Editor</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root {
+    --bg: #080808;
+    --bg2: #0f0f0f;
+    --accent: #ff3c00;
+    --accent2: #ffb800;
+    --white: #f0ece4;
+    --muted: #555;
+    --border: #1e1e1e;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--white); font-family: 'Outfit', sans-serif; overflow-x: hidden; cursor: none; }
+  .cursor { width: 12px; height: 12px; background: var(--accent); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; transition: transform 0.15s ease; mix-blend-mode: difference; }
+  .cursor-ring { width: 36px; height: 36px; border: 1px solid var(--accent); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9998; transition: all 0.3s ease; opacity: 0.6; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 1000; opacity: 0.4; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 24px 60px; border-bottom: 1px solid transparent; transition: all 0.4s ease; backdrop-filter: blur(0px); }
+  nav.scrolled { background: rgba(8,8,8,0.9); border-color: var(--border); backdrop-filter: blur(20px); }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 3px; color: var(--white); text-decoration: none; }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 40px; list-style: none; }
+  .nav-links a { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.3s; }
+  .nav-links a:hover { color: var(--white); }
+  .hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 60px 80px; position: relative; overflow: hidden; }
+  .hero-bg-text { position: absolute; bottom: -20px; right: -20px; font-family: 'Bebas Neue', sans-serif; font-size: clamp(120px, 20vw, 300px); color: transparent; -webkit-text-stroke: 1px #1a1a1a; pointer-events: none; line-height: 1; user-select: none; }
+  .hero-tag { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
+  .hero-tag::before { content: ''; width: 40px; height: 1px; background: var(--accent); display: block; }
+  h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(72px, 12vw, 160px); line-height: 0.9; letter-spacing: 2px; margin-bottom: 32px; }
+  h1 .line2 { color: var(--accent); display: block; }
+  .hero-desc { max-width: 520px; font-size: 16px; line-height: 1.8; color: #888; font-weight: 300; margin-bottom: 48px; }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn-primary { padding: 16px 40px; background: var(--accent); color: var(--white); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; border: none; text-decoration: none; display: inline-block; transition: all 0.3s; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px)); }
+  .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); }
+  .btn-secondary { padding: 16px 40px; background: transparent; color: var(--white); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; border: 1px solid #333; text-decoration: none; display: inline-block; transition: all 0.3s; }
+  .btn-secondary:hover { border-color: var(--white); }
+  .hero-stats { position: absolute; right: 60px; bottom: 80px; display: flex; flex-direction: column; gap: 32px; text-align: right; }
+  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--white); line-height: 1; }
+  .stat-num span { color: var(--accent); }
+  .stat-label { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+  .marquee-wrap { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; padding: 16px 0; background: var(--bg2); }
+  .marquee-track { display: flex; gap: 0; animation: marquee 20s linear infinite; white-space: nowrap; }
+  .marquee-item { font-family: 'Bebas Neue', sans-serif; font-size: 14px; letter-spacing: 4px; color: var(--muted); padding: 0 40px; display: flex; align-items: center; gap: 20px; }
+  .marquee-item .dot { color: var(--accent); font-size: 20px; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  section { padding: 120px 60px; }
+  .section-label { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+  .section-label::before { content: ''; width: 40px; height: 1px; background: var(--accent); }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(48px, 6vw, 80px); letter-spacing: 2px; margin-bottom: 60px; line-height: 1; }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
+  .service-card { background: var(--bg); padding: 48px 40px; transition: background 0.3s; position: relative; overflow: hidden; }
+  .service-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--accent); transition: width 0.4s ease; }
+  .service-card:hover { background: var(--bg2); }
+  .service-card:hover::after { width: 100%; }
+  .service-num { font-family: 'Bebas Neue', sans-serif; font-size: 64px; color: #1e1e1e; line-height: 1; margin-bottom: 24px; }
+  .service-icon { font-size: 32px; margin-bottom: 20px; }
+  .service-title { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 2px; margin-bottom: 16px; color: var(--white); }
+  .service-desc { font-size: 14px; line-height: 1.8; color: #666; font-weight: 300; }
+  .service-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+  .tag { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border: 1px solid var(--border); color: var(--muted); }
+  .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .work-card { position: relative; overflow: hidden; background: var(--bg2); border: 1px solid var(--border); aspect-ratio: 16/9; cursor: none; }
+  .work-card.featured { grid-column: span 2; aspect-ratio: 21/9; }
+  .work-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 60%); display: flex; flex-direction: column; justify-content: flex-end; padding: 32px; }
+  .work-cat { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+  .work-title { font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 2px; color: var(--white); }
+  .work-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 64px; background: linear-gradient(135deg, #111 0%, #1a1a1a 100%); }
+  .tools-section { background: var(--bg2); }
+  .tools-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); }
+  .tool-item { background: var(--bg2); padding: 40px; text-align: center; transition: background 0.3s; }
+  .tool-item:hover { background: #111; }
+  .tool-icon { font-size: 40px; margin-bottom: 16px; }
+  .tool-name { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 2px; color: var(--white); margin-bottom: 4px; }
+  .tool-desc { font-size: 12px; color: var(--muted); font-family: 'Space Mono', monospace; }
+  .contact-section { text-align: center; padding: 160px 60px; border-top: 1px solid var(--border); }
+  .contact-email { font-family: 'Bebas Neue', sans-serif; font-size: clamp(32px, 5vw, 64px); color: var(--white); text-decoration: none; letter-spacing: 2px; display: block; margin: 32px 0 48px; transition: color 0.3s; }
+  .contact-email:hover { color: var(--accent); }
+  .social-links { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; }
+  .social-link { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: all 0.3s; padding: 14px 28px; border: 1px solid var(--border); display: flex; align-items: center; gap: 10px; }
+  .social-link i { font-size: 16px; }
+  .social-link:hover { color: var(--white); border-color: var(--white); }
+  footer { border-top: 1px solid var(--border); padding: 32px 60px; display: flex; justify-content: space-between; align-items: center; }
+  footer p { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; }
+  .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+  @media (max-width: 900px) {
+    nav { padding: 20px 24px; }
+    .nav-links { display: none; }
+    .hero { padding: 100px 24px 60px; }
+    .hero-stats { display: none; }
+    section { padding: 80px 24px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .work-grid { grid-template-columns: 1fr; }
+    .work-card.featured { grid-column: span 1; }
+    .tools-grid { grid-template-columns: repeat(2, 1fr); }
+    footer { flex-direction: column; gap: 12px; padding: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<nav id="navbar">
+  <a href="#" class="nav-logo">L<span>.</span>EDIT</a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<section class="hero">
+  <div>
+    <div class="hero-tag">Available for work</div>
+    <h1>LOKESH<span class="line2">EDITS.</span></h1>
+    <p class="hero-desc">Freelance video editor crafting cinematic stories, punchy social content, and polished corporate videos. Every frame, intentional.</p>
+    <div class="hero-ctas">
+      <a href="#work" class="btn-primary">View My Work</a>
+      <a href="#contact" class="btn-secondary">Let's Talk</a>
+    </div>
+  </div>
+  <div class="hero-bg-text">VFX</div>
+  <div class="hero-stats">
+    <div><div class="stat-num">50<span>+</span></div><div class="stat-label">Projects Done</div></div>
+    <div><div class="stat-num">3<span>+</span></div><div class="stat-label">Years Exp</div></div>
+    <div><div class="stat-num">30<span>+</span></div><div class="stat-label">Happy Clients</div></div>
+  </div>
+</section>
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item"><span class="dot">◆</span> CINEMATIC EDITING</div>
+    <div class="marquee-item"><span class="dot">◆</span> REELS & SHORTS</div>
+    <div class="marquee-item"><span class="dot">◆</span> COLOR GRADING</div>
+    <div class="marquee-item"><span class="dot">◆</span> MOTION GRAPHICS</div>
+    <div class="marquee-item"><span class="dot">◆</span> CORPORATE VIDEOS</div>
+    <div class="marquee-item"><span class="dot">◆</span> SOUND DESIGN</div>
+    <div class="marquee-item"><span class="dot">◆</span> CINEMATIC EDITING</div>
+    <div class="marquee-item"><span class="dot">◆</span> REELS & SHORTS</div>
+    <div class="marquee-item"><span class="dot">◆</span> COLOR GRADING</div>
+    <div class="marquee-item"><span class="dot">◆</span> MOTION GRAPHICS</div>
+    <div class="marquee-item"><span class="dot">◆</span> CORPORATE VIDEOS</div>
+    <div class="marquee-item"><span class="dot">◆</span> SOUND DESIGN</div>
+  </div>
+</div>
+<section id="work">
+  <div class="fade-in">
+    <div class="section-label">Selected Work</div>
+    <div class="section-title">MY PROJECTS</div>
+  </div>
+  <div class="work-grid fade-in">
+    <div class="work-card featured">
+      <div class="work-placeholder">🎬</div>
+      <div class="work-overlay"><div class="work-cat">Cinematic · Featured</div><div class="work-title">CINEMATIC SHOWREEL 2024</div></div>
+    </div>
+    <div class="work-card">
+      <div class="work-placeholder">📱</div>
+      <div class="work-overlay"><div class="work-cat">Social Media</div><div class="work-title">BRAND REELS PACK</div></div>
+    </div>
+    <div class="work-card">
+      <div class="work-placeholder">💼</div>
+      <div class="work-overlay"><div class="work-cat">Corporate</div><div class="work-title">COMPANY PROMO FILM</div></div>
+    </div>
+    <div class="work-card">
+      <div class="work-placeholder">🎵</div>
+      <div class="work-overlay"><div class="work-cat">Music Video</div><div class="work-title">LYRICAL EDIT CUT</div></div>
+    </div>
+    <div class="work-card">
+      <div class="work-placeholder">🏷️</div>
+      <div class="work-overlay"><div class="work-cat">Social Media · Shorts</div><div class="work-title">PRODUCT LAUNCH REEL</div></div>
+    </div>
+  </div>
+</section>
+<section id="services">
+  <div class="fade-in">
+    <div class="section-label">What I Offer</div>
+    <div class="section-title">SERVICES</div>
+  </div>
+  <div class="services-grid fade-in">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <div class="service-icon">🎬</div>
+      <div class="service-title">CINEMATIC EDITING</div>
+      <div class="service-desc">Feature-level cuts with rhythm, pacing, and story. Built for films, short docs, and narrative-driven content that demands emotion.</div>
+      <div class="service-tags"><span class="tag">Color Grade</span><span class="tag">Sound Mix</span><span class="tag">LUTs</span></div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <div class="service-icon">📱</div>
+      <div class="service-title">REELS & SHORTS</div>
+      <div class="service-desc">Hook in 3 seconds. Viral-ready edits for Instagram, YouTube Shorts & TikTok — fast, punchy, trend-aware.</div>
+      <div class="service-tags"><span class="tag">Trending Audio</span><span class="tag">Transitions</span><span class="tag">Captions</span></div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <div class="service-icon">💼</div>
+      <div class="service-title">CORPORATE VIDEO</div>
+      <div class="service-desc">Clean, professional edits for product launches, brand films, explainers, and internal comms that build trust and convert.</div>
+      <div class="service-tags"><span class="tag">Motion Graphics</span><span class="tag">Lower Thirds</span><span class="tag">Subtitles</span></div>
+    </div>
+  </div>
+</section>
+<section id="tools" class="tools-section">
+  <div class="fade-in">
+    <div class="section-label">My Stack</div>
+    <div class="section-title">TOOLS I USE</div>
+  </div>
+  <div class="tools-grid fade-in">
+    <div class="tool-item"><div class="tool-icon">🎞️</div><div class="tool-name">PREMIERE PRO</div><div class="tool-desc">Primary NLE</div></div>
+    <div class="tool-item"><div class="tool-icon">✨</div><div class="tool-name">AFTER EFFECTS</div><div class="tool-desc">Motion & VFX</div></div>
+    <div class="tool-item"><div class="tool-icon">🎨</div><div class="tool-name">DAVINCI RESOLVE</div><div class="tool-desc">Color Grading</div></div>
+    <div class="tool-item"><div class="tool-icon">🔊</div><div class="tool-name">AUDITION</div><div class="tool-desc">Audio Design</div></div>
+  </div>
+</section>
+<section id="contact" class="contact-section">
+  <div class="contact-inner fade-in">
+    <div class="section-label" style="justify-content:center; margin-bottom: 0;">Let's Collaborate</div>
+    <a href="mailto:lokeshedits79@gmail.com" class="contact-email">lokeshedits79@gmail.com</a>
+    <div class="social-links">
+      <a href="https://instagram.com/_lokesh_visuals" class="social-link" target="_blank">
+        <i class="fa-brands fa-instagram"></i> Instagram
+      </a>
+      <a href="https://wa.me/917989095509" class="social-link" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="mailto:lokeshedits79@gmail.com" class="social-link">
+        <i class="fa-solid fa-envelope"></i> Email
+      </a>
+    </div>
+  </div>
+</section>
+<footer>
+  <p>© 2025 Lokesh · Video Editor</p>
+  <p>Crafted with ❤️ — Hyderabad, India</p>
+</footer>
+<script>
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.transform = `translate(${mx - 6}px, ${my - 6}px)`;
+  });
+  function animateRing() {
+    rx += (mx - rx - 18) * 0.12;
+    ry += (my - ry - 18) * 0.12;
+    ring.style.transform = `translate(${rx}px, ${ry}px)`;
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
