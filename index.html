@@ -297,10 +297,7 @@
     line-height: 1;
     margin-bottom: 24px;
   }
-  .service-icon {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
+  .service-icon { font-size: 32px; margin-bottom: 20px; }
   .service-title {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 28px;
@@ -314,12 +311,7 @@
     color: #666;
     font-weight: 300;
   }
-  .service-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 24px;
-  }
+  .service-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
   .tag {
     font-family: 'Space Mono', monospace;
     font-size: 10px;
@@ -345,14 +337,6 @@
     cursor: none;
   }
   .work-card.featured { grid-column: span 2; aspect-ratio: 21/9; }
-  .work-thumb {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-    opacity: 0.6;
-  }
-  .work-card:hover .work-thumb { transform: scale(1.05); opacity: 0.8; }
   .work-overlay {
     position: absolute;
     inset: 0;
@@ -414,17 +398,42 @@
     color: var(--muted);
     font-family: 'Space Mono', monospace;
   }
-<!-- CONTACT -->
-<section id="contact" class="contact-section">
-  <div class="contact-inner fade-in">
-    <div class="section-label" style="justify-content:center; margin-bottom: 0;">Let's Collaborate</div>
-    <a href="mailto:lokeshedits79@gmail.com" class="contact-email">lokeshedits79@gmail.com</a>
-    <div class="social-links">
-      <a href="https://instagram.com/_lokesh_visuals" class="social-link" target="_blank">Instagram</a>
-      <a href="https://wa.me/917989095509" class="social-link" target="_blank">WhatsApp</a>
-    </div>
-  </div>
-</section>
+
+  /* CONTACT */
+  .contact-section {
+    text-align: center;
+    padding: 160px 60px;
+    border-top: 1px solid var(--border);
+  }
+  .contact-email {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(32px, 5vw, 64px);
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 2px;
+    display: block;
+    margin: 32px 0 48px;
+    transition: color 0.3s;
+  }
+  .contact-email:hover { color: var(--accent); }
+  .social-links {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .social-link {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 12px 24px;
+    border: 1px solid var(--border);
+  }
+  .social-link:hover { color: var(--white); border-color: var(--white); }
 
   /* FOOTER */
   footer {
@@ -469,7 +478,6 @@
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- NAV -->
 <nav id="navbar">
   <a href="#" class="nav-logo">L<span>.</span>EDIT</a>
   <ul class="nav-links">
@@ -480,18 +488,11 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div>
     <div class="hero-tag">Available for work</div>
-    <h1>
-      LOKESH
-      <span class="line2">EDITS.</span>
-    </h1>
-    <p class="hero-desc">
-      Freelance video editor crafting cinematic stories, punchy social content, 
-      and polished corporate videos. Every frame, intentional.
-    </p>
+    <h1>LOKESH<span class="line2">EDITS.</span></h1>
+    <p class="hero-desc">Freelance video editor crafting cinematic stories, punchy social content, and polished corporate videos. Every frame, intentional.</p>
     <div class="hero-ctas">
       <a href="#work" class="btn-primary">View My Work</a>
       <a href="#contact" class="btn-secondary">Let's Talk</a>
@@ -499,22 +500,12 @@
   </div>
   <div class="hero-bg-text">VFX</div>
   <div class="hero-stats">
-    <div>
-      <div class="stat-num">50<span>+</span></div>
-      <div class="stat-label">Projects Done</div>
-    </div>
-    <div>
-      <div class="stat-num">3<span>+</span></div>
-      <div class="stat-label">Years Exp</div>
-    </div>
-    <div>
-      <div class="stat-num">30<span>+</span></div>
-      <div class="stat-label">Happy Clients</div>
-    </div>
+    <div><div class="stat-num">50<span>+</span></div><div class="stat-label">Projects Done</div></div>
+    <div><div class="stat-num">3<span>+</span></div><div class="stat-label">Years Exp</div></div>
+    <div><div class="stat-num">30<span>+</span></div><div class="stat-label">Happy Clients</div></div>
   </div>
 </section>
 
-<!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-track">
     <div class="marquee-item"><span class="dot">◆</span> CINEMATIC EDITING</div>
@@ -532,7 +523,6 @@
   </div>
 </div>
 
-<!-- WORK -->
 <section id="work">
   <div class="fade-in">
     <div class="section-label">Selected Work</div>
@@ -541,43 +531,27 @@
   <div class="work-grid fade-in">
     <div class="work-card featured">
       <div class="work-placeholder">🎬</div>
-      <div class="work-overlay">
-        <div class="work-cat">Cinematic · Featured</div>
-        <div class="work-title">CINEMATIC SHOWREEL 2024</div>
-      </div>
+      <div class="work-overlay"><div class="work-cat">Cinematic · Featured</div><div class="work-title">CINEMATIC SHOWREEL 2024</div></div>
     </div>
     <div class="work-card">
       <div class="work-placeholder">📱</div>
-      <div class="work-overlay">
-        <div class="work-cat">Social Media</div>
-        <div class="work-title">BRAND REELS PACK</div>
-      </div>
+      <div class="work-overlay"><div class="work-cat">Social Media</div><div class="work-title">BRAND REELS PACK</div></div>
     </div>
     <div class="work-card">
       <div class="work-placeholder">💼</div>
-      <div class="work-overlay">
-        <div class="work-cat">Corporate</div>
-        <div class="work-title">COMPANY PROMO FILM</div>
-      </div>
+      <div class="work-overlay"><div class="work-cat">Corporate</div><div class="work-title">COMPANY PROMO FILM</div></div>
     </div>
     <div class="work-card">
       <div class="work-placeholder">🎵</div>
-      <div class="work-overlay">
-        <div class="work-cat">Music Video</div>
-        <div class="work-title">LYRICAL EDIT CUT</div>
-      </div>
+      <div class="work-overlay"><div class="work-cat">Music Video</div><div class="work-title">LYRICAL EDIT CUT</div></div>
     </div>
     <div class="work-card">
       <div class="work-placeholder">🏷️</div>
-      <div class="work-overlay">
-        <div class="work-cat">Social Media · Shorts</div>
-        <div class="work-title">PRODUCT LAUNCH REEL</div>
-      </div>
+      <div class="work-overlay"><div class="work-cat">Social Media · Shorts</div><div class="work-title">PRODUCT LAUNCH REEL</div></div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services">
   <div class="fade-in">
     <div class="section-label">What I Offer</div>
@@ -589,89 +563,55 @@
       <div class="service-icon">🎬</div>
       <div class="service-title">CINEMATIC EDITING</div>
       <div class="service-desc">Feature-level cuts with rhythm, pacing, and story. Built for films, short docs, and narrative-driven content that demands emotion.</div>
-      <div class="service-tags">
-        <span class="tag">Color Grade</span>
-        <span class="tag">Sound Mix</span>
-        <span class="tag">LUTs</span>
-      </div>
+      <div class="service-tags"><span class="tag">Color Grade</span><span class="tag">Sound Mix</span><span class="tag">LUTs</span></div>
     </div>
     <div class="service-card">
       <div class="service-num">02</div>
       <div class="service-icon">📱</div>
       <div class="service-title">REELS & SHORTS</div>
       <div class="service-desc">Hook in 3 seconds. Viral-ready edits for Instagram, YouTube Shorts & TikTok — fast, punchy, trend-aware.</div>
-      <div class="service-tags">
-        <span class="tag">Trending Audio</span>
-        <span class="tag">Transitions</span>
-        <span class="tag">Captions</span>
-      </div>
+      <div class="service-tags"><span class="tag">Trending Audio</span><span class="tag">Transitions</span><span class="tag">Captions</span></div>
     </div>
     <div class="service-card">
       <div class="service-num">03</div>
       <div class="service-icon">💼</div>
       <div class="service-title">CORPORATE VIDEO</div>
       <div class="service-desc">Clean, professional edits for product launches, brand films, explainers, and internal comms that build trust and convert.</div>
-      <div class="service-tags">
-        <span class="tag">Motion Graphics</span>
-        <span class="tag">Lower Thirds</span>
-        <span class="tag">Subtitles</span>
-      </div>
+      <div class="service-tags"><span class="tag">Motion Graphics</span><span class="tag">Lower Thirds</span><span class="tag">Subtitles</span></div>
     </div>
   </div>
 </section>
 
-<!-- TOOLS -->
 <section id="tools" class="tools-section">
   <div class="fade-in">
     <div class="section-label">My Stack</div>
     <div class="section-title">TOOLS I USE</div>
   </div>
   <div class="tools-grid fade-in">
-    <div class="tool-item">
-      <div class="tool-icon">🎞️</div>
-      <div class="tool-name">PREMIERE PRO</div>
-      <div class="tool-desc">Primary NLE</div>
-    </div>
-    <div class="tool-item">
-      <div class="tool-icon">✨</div>
-      <div class="tool-name">AFTER EFFECTS</div>
-      <div class="tool-desc">Motion & VFX</div>
-    </div>
-    <div class="tool-item">
-      <div class="tool-icon">🎨</div>
-      <div class="tool-name">DAVINCI RESOLVE</div>
-      <div class="tool-desc">Color Grading</div>
-    </div>
-    <div class="tool-item">
-      <div class="tool-icon">🔊</div>
-      <div class="tool-name">AUDITION</div>
-      <div class="tool-desc">Audio Design</div>
-    </div>
+    <div class="tool-item"><div class="tool-icon">🎞️</div><div class="tool-name">PREMIERE PRO</div><div class="tool-desc">Primary NLE</div></div>
+    <div class="tool-item"><div class="tool-icon">✨</div><div class="tool-name">AFTER EFFECTS</div><div class="tool-desc">Motion & VFX</div></div>
+    <div class="tool-item"><div class="tool-icon">🎨</div><div class="tool-name">DAVINCI RESOLVE</div><div class="tool-desc">Color Grading</div></div>
+    <div class="tool-item"><div class="tool-icon">🔊</div><div class="tool-name">AUDITION</div><div class="tool-desc">Audio Design</div></div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="contact-section">
   <div class="contact-inner fade-in">
     <div class="section-label" style="justify-content:center; margin-bottom: 0;">Let's Collaborate</div>
-    <a href="mailto:lokesh@email.com" class="contact-email">lokesh@email.com</a>
+    <a href="mailto:lokeshedits79@gmail.com" class="contact-email">lokeshedits79@gmail.com</a>
     <div class="social-links">
-      <a href="#" class="social-link">Instagram</a>
-      <a href="#" class="social-link">YouTube</a>
-      <a href="#" class="social-link">LinkedIn</a>
-      <a href="#" class="social-link">WhatsApp</a>
+      <a href="https://instagram.com/_lokesh_visuals" class="social-link" target="_blank">Instagram</a>
+      <a href="https://wa.me/917989095509" class="social-link" target="_blank">WhatsApp</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>© 2024 Lokesh · Video Editor</p>
-  <p>Crafted with ❤️ — Chennai, India</p>
+  <p>© 2025 Lokesh · Video Editor</p>
+  <p>Crafted with ❤️ — Hyderabad, India</p>
 </footer>
 
 <script>
-  // Custom cursor
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
   let mx = 0, my = 0, rx = 0, ry = 0;
@@ -687,13 +627,11 @@
   }
   animateRing();
 
-  // Nav scroll
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 60);
   });
 
-  // Fade-in on scroll
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.15 });
