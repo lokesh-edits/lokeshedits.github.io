@@ -416,50 +416,16 @@
   }
 
   /* CONTACT */
-  .contact-section {
-    background: var(--bg);
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .contact-section::before {
-    content: 'HIRE ME';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(80px, 18vw, 240px);
-    color: transparent;
-    -webkit-text-stroke: 1px #141414;
-    pointer-events: none;
-    white-space: nowrap;
-  }
-  .contact-inner { position: relative; z-index: 2; }
-  .contact-email {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(32px, 5vw, 64px);
-    color: var(--white);
-    text-decoration: none;
-    letter-spacing: 2px;
-    display: block;
-    margin: 32px 0 48px;
-    transition: color 0.3s;
-  }
-  .contact-email:hover { color: var(--accent); }
-  .social-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
-  .social-link {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted);
-    text-decoration: none;
-    padding: 12px 24px;
-    border: 1px solid var(--border);
-    transition: all 0.3s;
-  }
-  .social-link:hover { color: var(--white); border-color: var(--white); }
+<section id="contact" class="contact-section">
+  <div class="contact-inner fade-in">
+    <div class="section-label" style="justify-content:center; margin-bottom: 0;">Let's Collaborate</div>
+    <a href="mailto:lokeshedits79@gmail.com" class="contact-email">lokeshedits79@gmail.com</a>
+    <div class="social-links">
+      <a href="https://instagram.com/_lokesh_visuals" class="social-link" target="_blank">Instagram</a>
+      <a href="https://wa.me/917989095509" class="social-link" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+</section>
 
   /* FOOTER */
   footer {
